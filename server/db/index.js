@@ -9,6 +9,9 @@ const Department = connection.define('department', {
   name: Sequelize.STRING
 });
 
+//Class methods
+
+
 //associations
 User.belongsTo(Department);
 Department.hasMany(User); //Department include User matches users to the department in question by the the departmentId foreign key in users table to the id key in the department's table

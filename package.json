@@ -5,13 +5,22 @@
   "license": "MIT",
   "scripts": {
     "test": "DATABASE_URL=postgres://localhost:5432/acme_departments nodemon node_modules/.bin/mocha",
-    "start:dev": "DATABASE_URL=postgres://localhost:5432/acme_departments nodemon server.js"
+    "start:dev": "npm run webpack -- --watch & DATABASE_URL=postgres://localhost:5432/acme_departments nodemon server.js --ignore src/ --ignore dist/",
+    "webpack": "webpack"
   },
   "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
     "express": "^4.16.3",
     "mocha": "^5.2.0",
     "pg": "^7.4.3",
-    "sequelize": "^4.38.0"
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "sequelize": "^4.38.0",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
   }
 }

@@ -39,5 +39,13 @@ describe('db', () => {
     })
     .then( department => expect(department.users.length).to.equal(2) )
       .catch( err => expect(err).to.equal('whoops') )
-  })
+  });
+
 })
+
+
+
+
+
+
+
