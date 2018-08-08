@@ -4,10 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "DATABASE_URL=postgres://localhost:5432/acme_departments nodemon node_modules/.bin/mocha"
+    "test": "DATABASE_URL=postgres://localhost:5432/acme_departments nodemon node_modules/.bin/mocha",
+    "start:dev": "DATABASE_URL=postgres://localhost:5432/acme_departments nodemon server.js"
   },
   "dependencies": {
     "chai": "^4.1.2",
+    "express": "^4.16.3",
     "mocha": "^5.2.0",
     "pg": "^7.4.3",
     "sequelize": "^4.38.0"
